@@ -32,6 +32,7 @@ Basic Roomba functions have also been verified (not in this sketch):
 Basic usage
 ===================
 
+This is written for the Arduino Mega 2560.
 See the .ino file. Most of the shield functions are in "roombashield.h",
 with byte-by-byte serial functions in "basicserial.h".
 After calling a setup function, the main loop looks for a character coming
@@ -41,11 +42,11 @@ into the USB serial console (57600 baud).
 Technical notes / Todo
 =======================
 
-The I2C could use some restructuring; it's all copy/pasted in bulk from
-the avr-libc examples.
+The I2C is admittedly very ugly and could use some encapsulation; 
+it's all copy/pasted in bulk from the avr-libc examples.
 
 See the respective header files for setup information on the gyro and
-accelerometer.
+accelerometer. Note the selection of Block Update and Big Endian modes.
 
 =======================
 Legal (BSD License)
